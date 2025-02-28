@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS</title>
+</head>
+<body>
+    <head>
+        <h1>Olá, mundo!</h1>
+        <p>Ufa, já me livrei da maldição.</p>
+    </head>
+    <style>
+        h1{
+            color: rgb(100, 182, 237);
+        }
+        p{
+            color: cadetblue;
+        }
+    </style>
+    <script>
+        // ****************** Conversão string -> numero *********************
+        var nome = window.prompt('Qual seu nome');
+        window.alert('É um prazer te conhecer, ' + nome);
+        //var n1 = window.prompt('Digite um numero: ');
+        var n1 = Number.parseInt(window.prompt('Digite um numero: '));
+        //var n2 = window.prompt('Digite outro numero: ');
+        var n2 = Number.parseInt(window.prompt('Digite outro numero: '));
+        var soma = n1 + n2;
+        window.alert('A soma dos valores é ' + soma); //errado! concatenação pois o js acredita ser uma string
+        // (number + number) para adição
+        // (string + string) para concatenação
+        //Number.parseInt(n) -> converter para um numero inteiro
+        //Number.parseFloat(n) -> converter para um numero quebrado
+        //em JS, também tem o tipo number (sem tipo definido)
+
+        // ******************* Conversão numero -> string ********************
+        //String(n) ou n.toString
+        //Exemplo: window.alert('A soma dos valores é ' + String(soma));
+        /******************* Template string *******************************
+        /**Node.js (exemplo do terminal){
+        > var s = 'Javascript'
+        undefined
+        > s
+        'Javascript'
+        > 'Eu estou estudando' + s
+        'Eu estou estudandoJavascript'
+        > 'Eu estou estudando ' + s
+        'Eu estou estudando Javascript'
+        > var nome = 'Gustavo'
+        undefined
+        > idade = 41
+        41
+        > nota = 5.5
+        5.5
+        > 'O aluno ' + nome + ' com ' + idade + ' anos tirou a nota ' + nota
+        'O aluno Gustavo com 41 anos tirou a nota 5.5'
+        > `O aluno ${nome} com ${idade} anos tirou a nota ${nota}`
+        'O aluno Gustavo com 41 anos tirou a nota 5.5'
+        >}*/
+
+        //Agora utilizando no html...
+        window.alert(`A soma entre ${n1} e ${n2} é ${soma}`);
+    </script>
+</body>
+</html>
